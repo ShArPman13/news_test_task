@@ -6,10 +6,27 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InputTextModule } from 'primeng/inputtext';
+import { ModalComponent } from './components/modal/modal.component';
+import { FileUploadModule } from 'primeng/fileupload';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [HttpClientModule, BrowserModule, AppRoutingModule, ButtonModule],
+  declarations: [AppComponent, HeaderComponent, ModalComponent],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    DialogModule,
+    BrowserAnimationsModule,
+    InputTextModule,
+    FileUploadModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

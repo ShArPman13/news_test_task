@@ -2,7 +2,7 @@ export interface IOneNew {
   id: number;
   title: string;
   description: string;
-  publishedDate: Date;
+  publishedDate: string;
   url: string;
   fullUrl: string;
   titleImageUrl: string;

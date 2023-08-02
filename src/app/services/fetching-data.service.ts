@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { IOneNew } from '../types/IOneNew';
 import { HttpClient } from '@angular/common/http';
+import { IResponse } from '../types/IResponse';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +12,8 @@ export class FetchingDataService {
   public constructor(private http: HttpClient) {}
 
   public getNews() {
-    return this.http.get<IOneNew[]>(this.LIST_NEWS_URL);
+    return this.http
+      .get<IResponse>(this.LIST_NEWS_URL)
+      .pipe(map(({ news }) => news));
   }
 }

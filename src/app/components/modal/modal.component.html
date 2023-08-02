@@ -1,0 +1,26 @@
+<form *ngIf="createForm" class="form-container" [formGroup]="createForm">
+  <div class="p-inputgroup">
+    <span class="p-inputgroup-addon"> Cap </span>
+    <input pInputText placeholder="Caption" />
+  </div>
+
+  <div class="p-inputgroup">
+    <span class="p-inputgroup-addon">Des</span>
+    <input type="text" pInputText placeholder="Description" />
+  </div>
+
+  <div class="buttons-container">
+    <p-fileUpload
+      mode="basic"
+      chooseLabel="Add pic"
+      name="demo[]"
+      url="https://www.primefaces.org/cdn/api/upload.php"
+      accept="image/*"
+    ></p-fileUpload>
+
+    <p-button
+      label="Submit"
+      styleClass="p-button-raised p-button-success"
+    ></p-button>
+  </div>
+</form>
