@@ -1,3 +1,9 @@
 <div *ngIf="allNews$ | async as news" class="news-container">
+  <app-one-new
+    *ngFor="let customNew of customNewsFromLS | async"
+    [new]="customNew"
+  ></app-one-new>
   <app-one-new *ngFor="let new of news" [new]="new"></app-one-new>
 </div>
+
+<p-progressSpinner *ngIf="isLoading"></p-progressSpinner>

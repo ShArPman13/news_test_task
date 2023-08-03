@@ -15,7 +15,7 @@
         [draggable]="false"
         [resizable]="false"
       >
-        <app-modal></app-modal>
+        <app-modal (visibleModal)="isModalVisible($event)"></app-modal>
       </p-dialog>
     </div>
   </div>

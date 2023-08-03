@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   public visible: boolean = false;
 
-  showDialog() {
+  public showDialog() {
     this.visible = true;
+  }
+
+  public isModalVisible(value: boolean) {
+    this.visible = value;
   }
 }

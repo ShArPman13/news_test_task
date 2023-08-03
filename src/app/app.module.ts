@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ModalComponent } from './components/modal/modal.component';
 import { FileUploadModule } from 'primeng/fileupload';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularToastifyModule, ToastService } from 'angular-toastify';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ModalComponent],
@@ -26,8 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FileUploadModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularToastifyModule,
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
