@@ -15,7 +15,16 @@
   }
 }
 
-.btn-submit,
+.btn-upload,
 .btn-submit {
-  width: 100%;
+  @media (max-width: 600px) {
+    width: 100%;
+
+    ::ng-deep {
+      .p-button,
+      .p-fileupload-choose {
+        width: 100%;
+      }
+    }
+  }
 }
