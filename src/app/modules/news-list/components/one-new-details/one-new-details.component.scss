@@ -1,0 +1,10 @@
+.container {
+  padding: 0 5px;
+  width: 100%;
+  max-width: 1000px;
+  ::ng-deep {
+    p a:first-child:not(.photo-first) {
+      display: none;
+    }
+  }
+}

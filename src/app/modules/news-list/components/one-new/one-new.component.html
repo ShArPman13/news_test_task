@@ -1,0 +1,13 @@
+<div *ngIf="new" class="card flex justify-content-center">
+  <p-card [header]="new.title" class="card">
+    <p class="font-semibold text-cyan-300">
+      {{ date | date }}
+    </p>
+    <ng-template pTemplate="header">
+      <img alt="Card" [src]="new.titleImageUrl" />
+    </ng-template>
+    <p class="text-ellipsis">
+      {{ new.description }}
+    </p>
+  </p-card>
+</div>

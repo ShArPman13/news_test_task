@@ -1,0 +1,37 @@
+<form class="form-container" [formGroup]="createForm">
+  <div class="p-inputgroup">
+    <span class="p-inputgroup-addon">T</span>
+    <input pInputText formControlName="title" placeholder="Title" />
+  </div>
+
+  <div class="p-inputgroup">
+    <span class="p-inputgroup-addon">D</span>
+    <input
+      type="text"
+      pInputText
+      formControlName="description"
+      placeholder="Description"
+    />
+  </div>
+
+  <div class="buttons-container">
+    <p-fileUpload
+      class="btn-upload"
+      mode="basic"
+      chooseLabel="Add pic"
+      name="file"
+      url="https://www.primefaces.org/cdn/api/upload.php"
+      accept="image/*"
+      [auto]="true"
+      (onUpload)="onUpload($event)"
+    ></p-fileUpload>
+
+    <p-button
+      class="btn-submit"
+      type="submit"
+      label="Submit"
+      styleClass="p-button-raised p-button-success"
+      (click)="onClick()"
+    ></p-button>
+  </div>
+</form>

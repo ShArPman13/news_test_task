@@ -1,0 +1,16 @@
+.content-wrapper {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px 40px;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}

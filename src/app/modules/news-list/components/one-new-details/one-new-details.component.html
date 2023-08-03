@@ -1,0 +1,5 @@
+<div *ngIf="news$ | async as news" class="container">
+  <p [innerHTML]="news.text"></p>
+</div>
+
+<p-progressSpinner *ngIf="isLoading"></p-progressSpinner>

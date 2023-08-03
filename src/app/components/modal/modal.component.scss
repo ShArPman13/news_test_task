@@ -1,0 +1,30 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.btn-upload,
+.btn-submit {
+  @media (max-width: 600px) {
+    width: 100%;
+
+    ::ng-deep {
+      .p-button,
+      .p-fileupload-choose {
+        width: 100%;
+      }
+    }
+  }
+}

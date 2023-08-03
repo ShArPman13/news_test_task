@@ -1,0 +1,24 @@
+<div class="header bg-cyan-400">
+  <div class="content">
+    <h1 class="text-2xl font-bold">NEWS PORTAL</h1>
+    <div class="card flex justify-content-center">
+      <p-button
+        *ngIf="isMainPage$ | async"
+        (click)="showDialog()"
+        icon="pi pi-external-link"
+        label="Add News"
+        styleClass="p-button-secondary"
+      ></p-button>
+      <p-dialog
+        header="Header"
+        [(visible)]="visible"
+        [modal]="true"
+        [style]="{ width: '50vw' }"
+        [draggable]="false"
+        [resizable]="false"
+      >
+        <app-modal (visibleModal)="isModalVisible($event)"></app-modal>
+      </p-dialog>
+    </div>
+  </div>
+</div>

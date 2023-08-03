@@ -1,0 +1,11 @@
+<div *ngIf="allNews$ | async as news" class="news-container">
+  <app-one-new
+    *ngFor="let customNew of customNewsFromLS | async"
+    [new]="customNew"
+  ></app-one-new>
+  <a style="cursor: pointer" *ngFor="let new of news" (click)="onClick(new)">
+    <app-one-new [new]="new"></app-one-new>
+  </a>
+</div>
+
+<p-progressSpinner *ngIf="isLoading"></p-progressSpinner>
