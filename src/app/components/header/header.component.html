@@ -3,9 +3,11 @@
     <h1 class="text-2xl font-bold">NEWS PORTAL</h1>
     <div class="card flex justify-content-center">
       <p-button
+        *ngIf="isMainPage$ | async"
         (click)="showDialog()"
         icon="pi pi-external-link"
         label="Add News"
+        styleClass="p-button-secondary"
       ></p-button>
       <p-dialog
         header="Header"
