@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomNewsService } from 'src/app/services/custom-news.service';
 import { FetchingDataService } from 'src/app/services/fetching-data.service';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { IOneNew } from 'src/app/types/IOneNew';
 
 @Component({
   selector: 'app-all-news',
@@ -11,20 +12,24 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class AllNewsComponent implements OnInit {
   public isLoading = false;
 
-  public allNews$ = this.fetchNewsService.getNews();
+  public allNews$ = this.fetchNewsService.fetchedNews$;
 
   public customNewsFromLS = this.customNewsService.customNews$;
 
   public constructor(
     private fetchNewsService: FetchingDataService,
     private customNewsService: CustomNewsService,
-    private ls: LocalStorageService
+    private router: Router
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.allNews$.subscribe();
     this.fetchNewsService.isLoading$.subscribe((loading: boolean) => {
       this.isLoading = loading;
     });
+  }
+
+  public onClick(news: IOneNew): void {
+    this.router.navigateByUrl(`details/${news.id}`);
   }
 }

@@ -1,0 +1,8 @@
+.container {
+  width: 1000px;
+  ::ng-deep {
+    p a:first-child:not(.photo-first) {
+      display: none;
+    }
+  }
+}

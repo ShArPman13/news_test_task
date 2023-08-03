@@ -5,9 +5,10 @@ import { NewsListRoutingModule } from './news-list-routing.module';
 import { CardModule } from 'primeng/card';
 import { OneNewComponent } from './components/one-new/one-new.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { OneNewDetailsComponent } from './components/one-new-details/one-new-details.component';
 
 @NgModule({
-  declarations: [AllNewsComponent, OneNewComponent],
+  declarations: [AllNewsComponent, OneNewComponent, OneNewDetailsComponent],
   imports: [
     CommonModule,
     NewsListRoutingModule,

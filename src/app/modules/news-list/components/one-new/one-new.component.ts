@@ -13,7 +13,7 @@ export class OneNewComponent implements OnInit {
   public date!: string;
 
   ngOnInit(): void {
-    console.log(this.new);
+    // console.log(this.new);
     this.date = this.new.publishedDate
       ? new Date(this.new.publishedDate).toString()
       : new Date().toString();
